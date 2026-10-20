@@ -4,7 +4,13 @@ A small Python library of graph algorithms. It currently provides **Dijkstra's s
 
 ## Installation
 
-Install straight from GitHub with pip (requires Python 3.8+ and Git). The package lives in the `src` folder, so the URL points there:
+Install from [PyPI](https://pypi.org/project/graphs-esroka/) with pip (requires Python 3.8+):
+
+```bash
+pip install graphs_esroka
+```
+
+Or install the latest version straight from GitHub (also requires Git). The package lives in the `src` folder, so the URL points there:
 
 ```bash
 pip install "git+https://github.com/ethancs13/graphs_esroka.git#subdirectory=src"
