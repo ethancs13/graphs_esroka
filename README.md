@@ -4,10 +4,10 @@ A small Python library of graph algorithms. It currently provides **Dijkstra's s
 
 ## Installation
 
-Install straight from GitHub with pip (requires Python 3.8+ and Git):
+Install straight from GitHub with pip (requires Python 3.8+ and Git). The package lives in the `src` folder, so the URL points there:
 
 ```bash
-pip install git+https://github.com/ethancs13/graphs_esroka.git
+pip install "git+https://github.com/ethancs13/graphs_esroka.git#subdirectory=src"
 ```
 
 To uninstall:
@@ -62,7 +62,7 @@ A tuple `(dist, path)`:
 `test.py` reads a graph from a text file and prints the shortest paths from node `0`:
 
 ```bash
-python test.py path/to/graph.txt
+python src/test.py path/to/graph.txt
 ```
 
 Each line of the file is one directed edge, written as `source destination weight` (all integers):
@@ -92,12 +92,13 @@ spf to 2: [0, 1]
 ```text
 graphs_esroka/
 ├── src/
-│   └── graphs_esroka/
-│       ├── __init__.py
-│       ├── heapq.py      # min-heap used by Dijkstra's algorithm
-│       └── sp.py         # shortest path algorithms
-├── test.py               # example script
-├── pyproject.toml        # package settings used by pip
+│   ├── graphs_esroka/
+│   │   ├── __init__.py
+│   │   ├── heapq.py      # min-heap used by Dijkstra's algorithm
+│   │   └── sp.py         # shortest path algorithms
+│   ├── test.py           # example script
+│   ├── README.md         # package description used by pip
+│   └── pyproject.toml    # package settings used by pip
 ├── LICENSE
 └── README.md
 ```
@@ -109,7 +110,14 @@ Clone the repository and install it in editable mode, so your code changes take 
 ```bash
 git clone https://github.com/ethancs13/graphs_esroka.git
 cd graphs_esroka
-pip install -e .
+pip install -e src
+```
+
+To build the distribution files (`.whl` and `.tar.gz`) into `src/dist`:
+
+```bash
+pip install build
+python -m build src
 ```
 
 ## Contributing

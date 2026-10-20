@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "graphs_esroka"
+version = "0.1.0"
+authors = [
+  { name="Ethan Sroka" },
+]
+description = "Python graph algorithms library (Dijkstra's shortest path)"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ethancs13/graphs_esroka"
+"Bug Tracker" = "https://github.com/ethancs13/graphs_esroka/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["graphs_esroka"]
